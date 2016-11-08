@@ -4,7 +4,9 @@ window.onload=function() {
 		$('#levels').show('slow')
 	};
 
-	/*document.getElementById('beginer').onclick = function () {
-		window.location = "beginer.html";
-	};*/
+	document.getElementById('beginer').onclick = function() {
+		$('#textList').show('slow');
+		$('#textarea').show('slow');
+	}
+
 };
