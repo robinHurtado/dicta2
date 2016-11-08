@@ -11,6 +11,17 @@ nav .brand-logo {
   color: #444;
 }
 
+h1.teal-text {
+ color: #4db6ac;
+ font-size: 42px;
+ text-align: center;
+ font-style: italic;
+}
+
+h5.center {
+  color: #4db6ac;
+}
+
 p {
   line-height: 2rem;
 }
