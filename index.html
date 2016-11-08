@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Dictame.com</title>
+  <title>Dictame</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -29,18 +29,17 @@
     </div>
   </nav>
 
+  <div class="row center">
+    <h5 class="header col s12 light">Animate a usar Dictame y así mejorar tu ingles a través de la escucha y la escitura</h5>
+  </div>
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">Dictame</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">Dictame.com es una pagina para aprender ingles a través de la escucha y la escitura</h5>
-        </div>
+        <br>
+        <h1 class="teal-text">"Aprender un Idioma solo te traera cosas buenas"</h1>        
         <div class="row center">
           <a href="#" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Comencemos</a>
         </div>
-        <br><br>
       </div>
     </div>
     <div class="parallax"><img src="mybackground.jpg" alt="Unsplashed background img 1"></div>
@@ -51,12 +50,14 @@
     <div class="section">
       <!--   Icon Section   -->
       <div class="row" id="levels" hidden="true">
-        <a href="beginer.html"><div class="col s12 m4">
-          <div class="icon-block" id="beginer">
-            <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Principiante</h5>
-            <p class="light">En este Nivel encontraras los siguientes textos:... de esta manera podras saber como estas o podras medirte contigo mismo si terminas con exito los texto completo</p>
-          </div></a>
+        
+          <div class="col s12 m4">
+            <div class="icon-block" id="beginer">
+              <a href="#" id="firstLevel">
+              <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+              <h5 class="center">Principiante</h5></a>
+              <p class="light">En este Nivel encontraras los siguientes textos:... de esta manera podras saber como estas o podras medirte contigo mismo si terminas con exito los texto completo</p>
+          </div>
         </div>
 
         <div class="col s12 m4">
@@ -78,8 +79,35 @@
         </div>
       </div>
 
-    </div> <!--end section-->
+    </div> <!-- end section-->
     
+    <!-- table of the audio texts -->    
+    <table hidden id="textList">
+      <th>
+        <td>Audio Textos</td>
+      </th>
+      <tr>
+        <td><a href="#">texto 1</a></td>
+      </tr>
+      <tr>
+        <td><a href="#">texto 2</a></td>
+       <tr>
+       <tr> 
+        <td><a href="#">texto 3</a></td>
+      </tr>
+    </table>
+
+    <audio controls>
+      <source src="Mac Miller-Days.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    
+    <!-- enter the audio text here -->
+    <div class="container" id="textarea" hidden>
+         <textarea rows="2" cols="11" required="true" placeholder="Ingresa el texto aqui"></textarea>
+         <a class="waves-effect waves-light btn">enviar</a>
+    </div>
+       
   </div> <!--end container of section-->
   
   <!--<div class="parallax-container valign-wrapper">
@@ -99,9 +127,9 @@
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Sobre Dictame.com</h4>
+          <h4>Sobre Dictame</h4>
           <p class="left-align light">
-            Dictame.com es una aplicacion web con el proposito de poder ayudar a las personas
+            Dictame es una aplicacion web con el proposito de poder ayudar a las personas
             a mejorar su ingles con la ayudas de textos con la complegidad eligda por la persona,los textos estan en forma de audios, con lo cual la persona utilizara su setido auditivo para luego escribir lo que cree que escucha y al terminar podra observar y compara su texto escrito con el texto original, de esta manera con practica y constancia su nivel de ingles mejorara.
           </p>
         </div>
@@ -110,10 +138,10 @@
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>¿Como Utilizar Dictame.com?</h4>
+          <h4>¿Como Utilizar Dictame?</h4>
           <p class="left-align light">
             Para empezar a disfrutar de tu avence en este idioma debes dar clic en el boton que dice
-            'Empecemos' luego podras observar los niveles, debes elegir uno, luego podras observar los textos para realizar el dictado esto quiere decir que si eliges un texto podras reproducir un audio y luego empezar a escribir en la caja de texto lo que escuchas.
+            'Comencemos' luego podras observar los niveles, debes elegir uno, luego podras observar los textos para realizar el dictado esto quiere decir que si eliges un texto podras reproducir un audio y luego empezar a escribir en la caja de texto lo que escuchas.
           </p>
         </div>
       </div>
@@ -126,7 +154,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">Dictame.com una forma perseverante de mejorar tú Ingles</h5>
+          <h5 class="header col s12 light">Dictame una forma perseverante de mejorar tú Ingles</h5>
         </div>
       </div>
     </div>
