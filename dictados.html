@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Principiante</title>
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Signup</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Niveles</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+  </nav>
+  <div class="container">
+    <!-- table of the audio texts -->    
+      <table id="textList">
+        <th>
+          <td>Audio Textos</td>
+        </th>
+        <tr>
+          <td><a href="#">texto 1</a></td>
+        </tr>
+        <tr>
+          <td><a href="#">texto 2</a></td>
+         <tr>
+         <tr> 
+          <td><a href="#">texto 3</a></td>
+        </tr>
+      </table>
+
+      <!-- enter the audio text here -->
+      <div class="container" id="textarea">
+        <audio controls>
+          <source src="Mac Miller-Days.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <textarea required="true" placeholder="Ingresa el texto aqui"></textarea>
+        <a class="waves-effect waves-light btn">enviar</a>
+      </div>      
+  </div>
+	
+</body>
+</html>
