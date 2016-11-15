@@ -4,6 +4,17 @@
 	<title>Principiante</title>
 	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script type="text/javascript">
+    window.onload = function() {
+      document.getElementById('send').onclick = function() {
+        document.getElementById('textArea').hidden = true;   // hide the textarea
+        textAreaVal = document.getElementById('textArea').value;  // get the value entered by the user
+        document.getElementById('userText').innerHTML = textAreaVal; // set the value to a hidden span
+        document.getElementById('userText').hidden = false;  // show the span containing the user text
+        document.getElementById('originText').hidden = false; // show original text
+      }
+    }
+  </script>
 </head>
 <body>
   <nav class="white" role="navigation">
@@ -24,31 +35,54 @@
   </nav>
   <div class="container">
     <!-- table of the audio texts -->    
-      <table id="textList">
-        <th>
-          <td>Audio Textos</td>
-        </th>
+    <table id="textList" class="striped responsive-table">
+      <thead>
         <tr>
-          <td><a href="#">Sports</a></td>
+          <th>Titulo del Texto</th>
+          <th>Audio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sports</td>
+          <td>
+            <audio controls>
+              <source src="sport.wav" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </td>
         </tr>
         <tr>
-          <td><a href="#">texto 2</a></td>
-         <tr>
-         <tr> 
-          <td><a href="#">texto 3</a></td>
+          <td>Titulo 2</td>
+          <td>Audio 2</td>
         </tr>
-      </table>
-
-      <!-- enter the audio text here -->
-      <div class="container" id="textarea">
-        <audio controls>
-          <source src="sports.wav" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-        <textarea required="true" placeholder="Ingresa el texto aqui"></textarea>
-        <a class="waves-effect waves-light btn">enviar</a>
-      </div>      
+        <tr> 
+          <td>Titulo 3</td>
+          <td>Aduio 3</td>
+        </tr>
+      </tbody>
+    </table>           
   </div>
-	
+  <br><br>
+
+  <!-- enter the audio text here -->
+	<div class="row">
+    <div class="col s6 m6 l6">
+      <textarea required="true" id="textArea" placeholder="Ingresa el texto aqui"></textarea>
+      <span class="flow-text" id="userText" hidden></span>
+    </div>    
+    <div class="col s6 m6 l6">
+      <span class="flow-text" id="originText" hidden>There is a great variety of sports you can practice outdoors. Man uses the various natural resources for his recreation, not only on land but also on water and in the air.
+      Different enviroments offer various possibilities for physical excersice. In countries like Switzerland, which has high mountains, hiking and mountain climbing are very popular, whereas sailing and diving are characteristic of islands and coastal countries.
+      Sports is not a provilege of rich people. Some sports like golf, horseback, riding and hang-gliding demand money, time and special place, but others like cycling, soccer and jogging are common to everbody.
+      Both old and young people enjoy sports. Football, Rugby and baseball require a lot of strength and good physical condition. On the other hand, swimming, fishing, hiking and golf are praticed by young and old people. Sports are convenient for everyone, specially for those who work indoors and don't have an opportunity to breathe fresh air and to get enough physical exercise.</span>
+    </div>
+    
+      <div class="col s12 m12 l12"> <!--ToDo change the text of the buton to: "Ir Atras" -->
+        <a class="waves-effect waves-light btn" id="send">enviar</a> 
+      </div>  
+    
+        
+  </div>
 </body>
 </html>

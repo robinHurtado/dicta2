@@ -18,10 +18,8 @@ h1.teal-text {
  font-style: italic;
 }
 
-textarea {
-    width: 100%;
-    height: 18rem;
-    background-color: transparent;
+#textArea {
+  height: 18rem;
 }
 
 h5.center {
