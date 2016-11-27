@@ -22,12 +22,21 @@ h1.teal-text {
   height: 18rem;
 }
 
+.ori1{
+ background-color: #69F0AE;
+}
+
 h5.center {
   color: #4db6ac;
 }
 
 p {
   line-height: 2rem;
+}
+
+p.left-align{
+ font-size: 23px;
+
 }
 
 .button-collapse {
