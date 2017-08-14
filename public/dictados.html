@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Principiante</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link href="./../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="./../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script type="text/javascript" src="./js/dictame.js"></script>
+</head>
+<body>
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Signup</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Niveles</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse">
+        <i class="material-icons">menu</i>
+      </a>
+    </div>
+  </nav>
+  <div class="container">
+    <!-- table of the audio texts -->    
+    <table id="textList" class="striped responsive-table">
+      <thead>
+        <tr>
+          <th>Titulo del Texto</th> <th>Audio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Sports</td>
+          <td><audio controls><source src="./audios/newSport.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+        </tr>
+        <tr>
+          <td>10 New Year's Resolutions You Probably Won't Keep</td>
+          <td><audio controls><source src="./audios/dictation2.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></td></tr>
+        <tr> 
+          <td>Strange Things Happened at Halloween</td><td><audio controls><source src="./audios/dictation2.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></td></tr>
+      </tbody>
+    </table>           
+  </div>
+  <br><br>
+  
+	<div class="row">
+    <div class="col s6 m6 l6"> <!-- enter the audio text here -->
+      <h5 id="yourLabel" hidden>Your Text:</h5>
+      <textarea required="true" id="textArea" placeholder="Ingresa el texto aqui"></textarea>
+      <span class="flow-text"   id="userText" hidden></span>
+    </div>    
+    <!-- Show the Origin here -->
+    <div class="col s6 m6 l6">
+      <span class="flow-text ori1" id="originText" hidden>
+      <!--<h5>Original Text:</h5>-->
+      </span>
+    </div>
+    <div class="col s12 m12 l12">
+      <span id="send"><a class="waves-effect waves-light btn">solución</a></span>
+      <span id="back" hidden><a class="waves-effect waves-light btn">atras</a></span>
+    </div>            
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">&copy;Dictame.com</h5>
+          <!--<p class="grey-text text-lighten-4">Somos un equipo entusiastas trabajando en este poryecto. Cualquier cantidad de dinero para ayudarnos es grandemente reconocida.</p>-->
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Contactanos</h5>
+          <ul><li><a class="white-text" href="#!">Escribir Email</a></li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">Hecho Por <a class="brown-text text-lighten-3" href="#">D. Robin</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

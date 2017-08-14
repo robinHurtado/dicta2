@@ -20,6 +20,11 @@ h1.teal-text {
 
 #textArea {
   height: 18rem;
+  margin-left: 320px;
+}
+
+#send, #back {
+ margin-left: 320px; 
 }
 
 .ori1{
@@ -39,6 +44,13 @@ p.left-align{
 
 }
 
+h5.header:hover {
+  -webkit-transition: font-size 2s ease-in;
+  font-size: 20px;
+  color: red;
+}
+
+/* style that comes with the library */
 .button-collapse {
   color: #26a69a;
 }
