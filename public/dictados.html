@@ -4,37 +4,28 @@
 	<title>Principiante</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<link href="./../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="./../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <script type="text/javascript" src="./js/dictame.js"></script>
 </head>
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <a id="logo-container" href="./../index.html" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Signup</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="#">Sign out</a></li>
       </ul>
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Niveles</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse">
-        <i class="material-icons">menu</i>
-      </a>
+      <!--<ul id="nav-mobile" class="side-nav"><li><a href="#">Niveles</a></li></ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>-->
     </div>
-  </nav>
-  <div class="container">
-    <!-- table of the audio texts -->    
+  </nav> <!-- Header -->
+  <!--<div class="container">
     <table id="textList" class="striped responsive-table">
-      <thead>
-        <tr>
-          <th>Titulo del Texto</th> <th>Audio</th>
-        </tr>
-      </thead>
+      <thead><tr><th>Titulo del Texto</th> <th>Audio</th></tr></thead>
       <tbody>
         <tr>
-          <td>Sports</td>
-          <td><audio controls><source src="./audios/newSport.wav" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
+          <td>Bear breaks into house</td>
+          <td><audio controls><source src="./audios/dictation1.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></td>
         </tr>
         <tr>
           <td>10 New Year's Resolutions You Probably Won't Keep</td>
@@ -43,12 +34,17 @@
           <td>Strange Things Happened at Halloween</td><td><audio controls><source src="./audios/dictation2.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio></td></tr>
       </tbody>
     </table>           
+  </div>-->
+  
+  <div class="container" style="margin-top: 5%;margin-left: 35%;">
+    <h4 class="flow-text" id="h4title">C'mon let's start  
+    <i class="material-icons" id="forward" style="cursor:pointer;color:#26a69a;">keyboard_arrow_right</i></h4>
+    <audio controls><source type="audio/mpeg">Your browser does not support the audio element.</audio>
   </div>
   <br><br>
-  
 	<div class="row">
     <div class="col s6 m6 l6"> <!-- enter the audio text here -->
-      <h5 id="yourLabel" hidden>Your Text:</h5>
+      <h5 id="yourText" hidden>Your Text:</h5>
       <textarea required="true" id="textArea" placeholder="Ingresa el texto aqui"></textarea>
       <span class="flow-text"   id="userText" hidden></span>
     </div>    

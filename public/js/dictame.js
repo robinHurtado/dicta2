@@ -8,7 +8,7 @@ window.onload = function() {
     document.getElementById('originText').hidden = false; // show original text
     document.getElementById('send').hidden = true; // hide the "Solucón" button
     document.getElementById('back').hidden = false; // show the "Atras" button
-    document.getElementById('yourLabel').hidden = false; // show label
+    document.getElementById('yourText').hidden = false; // show label
     fetch("js/textos.json")
     .then(response => response.json())
     .then(texts => {
@@ -22,8 +22,22 @@ window.onload = function() {
     document.getElementById('textArea').hidden = false;   // show the textarea
     document.getElementById('userText').hidden = true;  // hide the span containing the user text
     document.getElementById('originText').hidden = true; // hide original text
-    document.getElementById('yourLabel').hidden = true; // hide label
+    document.getElementById('yourText').hidden = true; // hide label
     document.getElementById('send').hidden = false; // show the "Solucón" button
     document.getElementById('back').hidden = true; // hide the "Solucón" button
   }
-}
+
+  var audiosList = ["./audios/dictation1.mp3","./audios/dictation2.mp3","./audios/dictation3.mp3"];
+  var audiosTitle = ["Bear breaks into house","10 New Year's Resolutions You Probably Won't Keep","Strange Things Happened at Halloween"];
+  var indx = -1;
+  
+  document.getElementById('forward').onclick = function(){
+  	indx++;
+  	if (indx >= audiosList.length) {
+  		indx = 0;
+  	}
+  	document.getElementsByTagName("audio")[0].src = audiosList[indx];
+  	document.getElementById('h4title').firstChild.textContent = audiosTitle[indx];
+  }
+
+}//finish function
