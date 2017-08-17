@@ -1,0 +1,24 @@
+{
+  "name": "dictame",
+  "version": "1.0.0",
+  "description": "page to help improve your English through dictations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robinHurtado/dicta2.git"
+  },
+  "author": "D. Robin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robinHurtado/dicta2/issues"
+  },
+  "homepage": "https://github.com/robinHurtado/dicta2#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "nodemon": "^1.11.0"
+  }
+}

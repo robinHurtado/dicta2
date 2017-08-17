@@ -7,6 +7,10 @@ window.onload = function() {
 
 	// onClick event for "Enviar" button
 	document.getElementById('send').onclick = function() {
+	    if (document.getElementById('originText').innerText === ""){
+	    	Materialize.toast('Con la flecha > sleccionas un texto!', 4000)
+	    	return false;
+	    }
 	    document.getElementById('textArea').hidden = true;   // hide the textarea
 	    textAreaVal = document.getElementById('textArea').value;  // get the value entered by the user
 	    document.getElementById('userText').innerHTML = textAreaVal; // set the value to a hidden span
@@ -17,7 +21,7 @@ window.onload = function() {
 	    document.getElementById('yourText').hidden = false; // show label
 	}
 
-      // get the original texts of the audios 
+	// get the original texts of the audios 
     fetch("js/textos.json")
     .then(response => response.json())
     .then(texts => {
@@ -35,13 +39,13 @@ window.onload = function() {
     document.getElementById('back').hidden = true; // hide the "Solucón" button
   }
 
-	// event when click forward arrow  
+	// fires event when click forward arrow  
 	document.getElementById('forward').onclick = function(){
 		indx++;
 		if (indx >= audiosList.length) {
-			indx = 0;
+			indx = 0; // reset index to access to first position
 		}
-		document.getElementsByTagName("audio")[0].src = audiosList[indx];
+		document.getElementsByTagName("audio")[0].src = audiosList[indx]; // change audio on every click forward
 		document.getElementById('h4title').firstChild.textContent = audiosTitle[indx];
 		document.getElementById('originText').innerHTML = allTexts["text"+indx];
 	}
