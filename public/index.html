@@ -43,11 +43,11 @@
         firebase.auth().signOut().then(function() {
           // Sign-out successful.
         }, function(error) {
-          console.log(error);
+          alert(error);
         });
-      }// end onclick event function
+      } // end onclick event function
 
-    }// end initApp function
+    } // end initApp function
 
     window.addEventListener('load', function() {
       initApp();
@@ -80,52 +80,17 @@
         </li>
       </ul>
   </nav>
-  <!-- Content -->
-  <div class="row center">
-    <h5 class="header col s12 light"><div id="name"></div>Animate a usar Dictame y así mejorar tu Inglés a través de la escucha y la escritura</h5><br><br>
-  </div>
-
-  <div class="container" hidden> <!-- niveles, dont show this for now -->
-      <div class="section">
-        <div class="row" id="levels">   <!--   Icon Section   -->
-            <div class="col s12 m4">
-              <div class="icon-block" id="beginer">
-                <a href="#" id="firstLevel"><!-- ToDo Make tooltips that show the content-->
-                <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-                <h5 class="center">Principiante</h5></a>
-                
-                <p class="light" hidden>En este Nivel encontraras los siguientes textos:... de esta manera podras saber como estas o podras medirte contigo mismo si terminas con exito los texto completo</p>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="icon-block">
-            <a href="#" id="firstLevel">
-              <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-              <h5 class="center">Intermedio</h5></a>
-
-              <p class="light" hidden>Con algo mas de complejidad en este nivel encontraras los siguientes textos:.. para que practiques tu escitura y escucha.</p>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="icon-block">
-              <a href="#" id="firstLevel">
-                <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-                <h5 class="center">Avanzado</h5></a>
-
-              <p class="light" hidden>Si crees que puedes con este nivel adelante, para este nivel tenemos los siguientes textos:.. para que sigas mejorando tu nivel de Inglés.</p>
-            </div>
-          </div>
+  <!-- Content -->   
+  <div class="parallax-container valign-wrapper" id="index-banner">
+    <div class="section no-pad-bot">    
+        <div class="row center">
+          <h3 class="header col s12 light firstText"><div id="name"></div>Animate a usar <b>Dictame</b> y así mejorar tu Inglés a través de la escucha y la escritura</h3>
         </div>
-      </div> <!-- end section-->   
-  </div> <!--end container of section this section is hidden for now -->
-   
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot"></div>
-    <div class="parallax"><img src="./imgs/mybackground.jpg" alt="Unsplashed background img 1"></div>
+    </div>    
+    <div class="parallax"><img src="./imgs/background1.png" alt="background img"></div>
   </div>
-  <div class="row">
+
+  <div class="row" hidden> <!-- should be an option in a floating button -->
     <div class="col s12 center">
       <h3><i class="mdi-content-send brown-text"></i></h3>
       <h4>Sobre Dictame</h4>
@@ -139,28 +104,22 @@
     </div>
   </div>
 
-    <div id="index-banner" class="parallax-container">
-      <div class="section no-pad-bot"></div>
-      <div class="parallax"><img src="./imgs/mybackground3.jpg" alt="Unsplashed background img 1"></div>
+    <div class="parallax-container valign-wrapper" id="index-banner">
+      <div class="section no-pad-bot">
+        <div class="col s12 center">
+          <h3>¿Como utilizar <b>Dictame</b>?</h3><br><br><br>
+           <h4><i>Reproduce  >  Escucha  >  Escribe</i></h4>
+        </div>
+      </div>
+      <div class="parallax"><img src="./imgs/background2.jpg" alt="background img 2"></div>
     </div>
 
     <div class="container">
       <div class="section">
-        <h1 class="teal-text">"Aprender un Idioma solo te traera cosas buenas"</h1>
+        <h1 class="teal-text">"Aprender un Idioma solo te traerá cosas buenas"</h1>
         <div class="container">                 
           <div class="row center">
             <a href="./dictados.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Comencemos</a>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="col s12 center">
-            <h3><i class="mdi-content-send brown-text"></i></h3>
-            <h4>¿Como Utilizar Dictame?</h4>
-            <p class="left-align light">
-              Para empezar a disfrutar de tu avence en este idioma debes dar clic en el boton que dice
-              "Comencemos" luego podras observar los audios disponibles y los titulos de estos audios, debes reproducir uno, luego podras inicar a realizar el dictado esto quiere decir empezar a escribir en la caja de texto lo que escuchas. <br> Cuando se termine el dictado debes darle clic en el boton "Enviar" y saldra el texto original al lado izquierdo y en el lado derecho estara el texto que ingresaste, asi podras comparar que tan acertado estuviste en el dictado, que errores tuviste para la proxima mejorar es muy divertido y sencillo. 
-            </p>
           </div>
         </div>
       </div>
@@ -170,11 +129,11 @@
       <div class="section no-pad-bot">
         <div class="container">
           <div class="row center">
-            <h5 class="header col s12 light">Dictame una forma perseverante de mejorar tú Inglés</h5>
+            <h3 class="header col s12 light"><b>Dictame</b> una forma perseverante de mejorar tú Inglés</h3>
           </div>
         </div>
       </div>
-      <div class="parallax"><img src="./imgs/mybackground2.jpg" alt="Unsplashed background img 3"></div>
+      <div class="parallax"><img src="./imgs/background3.png" alt="background img 3"></div>
     </div>
 
     <!-- footer -->
