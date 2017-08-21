@@ -26,6 +26,17 @@ h1.teal-text {
   color: black;
 }
 
+div.row.animated{
+  -webkit-animation-duration: 2s;
+  -webkit-animation-delay: 0.5s;
+}
+
+#start {
+  border-radius: 62px;
+  width: 27%;
+  color: floralwhite;
+}
+
 #textArea {
   height: 18rem;
   margin-left: 320px;

@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/animate.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <!-- FireBScript -->
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   <script src="js/config.js"></script>
@@ -83,7 +84,7 @@
   <!-- Content -->   
   <div class="parallax-container valign-wrapper" id="index-banner">
     <div class="section no-pad-bot">    
-        <div class="row center">
+        <div class="row center animated bounceInUp">
           <h3 class="header col s12 light firstText"><b><div id="name"></div></b>Animate a usar <b>Dictame</b> y así mejorar tu <b>Inglés</b> a través de la escucha y la escritura</h3>
         </div>
     </div>    
@@ -106,23 +107,21 @@
 
     <div class="parallax-container valign-wrapper" id="index-banner">
       <div class="section no-pad-bot">
-        <div class="col s12 center">
-          <h3>¿Como utilizar <b>Dictame</b>?</h3><br><br><br>
-           <h4><i>Reproduce  >  Escucha  >  Escribe</i></h4>
+        <div class="col s12 center" style="color: sienna;">
+          <h2 class="animated infinite tada">¿Como utilizar <b>Dictame</b>?</h2>
+           <h4><b>Para empezar debes darle clic en el boton que dice "Comencemos" luego podras observar el título del audio y una caja de texto para escribir lo que escuchas.</b></h4>
         </div>
       </div>
       <div class="parallax"><img src="./imgs/background2.jpg" alt="background img 2"></div>
     </div>
 
     <div class="container">
-      <div class="section">
         <h1 class="teal-text">"Aprender un Idioma solo te traerá cosas buenas"</h1>
         <div class="container">                 
-          <div class="row center">
-            <a href="./dictados.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Comencemos</a>
+          <div class="row center animated infinite pulse">
+            <a href="./dictados.html" id="start" class="btn-large waves-effect waves-light teal lighten-1">Comencemos</a>
           </div>
         </div>
-      </div>
     </div>
 
     <div class="parallax-container valign-wrapper">
