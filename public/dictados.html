@@ -5,25 +5,73 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CSS -->
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/animate.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <script type="text/javascript" src="js/dictame.js"></script>
+  <!-- FireBScript -->
+  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+  <script src="js/config.js"></script>
+  <script type="text/javascript">
+    initApp = function() {
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          var displayName = user.displayName;
+          var photoURL = user.photoURL;
+          user.getIdToken().then(function(accessToken) {
+             if (user.photoURL){
+              document.getElementById('name').textContent = user.displayName;
+              document.getElementById('photo').src = user.photoURL;
+              document.getElementById('photo').style.display = 'block';
+            } else {
+              document.getElementById('name').textContent = '';
+              document.getElementById('photo').style.display = 'none';
+            }            
+          });
+        } else {
+          document.getElementById('photo').style.display = 'none';
+        }
+      }, function(error) {console.log(error);});
+      
+    } // end initApp function
+
+    window.addEventListener('load', function() {
+      initApp();
+    });
+  </script>
 </head>
 <body>
-  <nav class="white" role="navigation">
+  <nav class="white" role="navigation"> <!-- NavBar -->
     <div class="nav-wrapper container">
       <a id="logo-container" href="./../index.html" class="brand-logo">Logo</a>
       <ul class="right hide-on-med-and-down">
-        <a href="#">Sign out</a></li>
+        <li>
+          <div id="photo-container" style="width: 60px;height: 60px;">
+            <img id="photo" style="width: 60px;height: 60px;border-radius: 60px;">
+          </div>
+        </li>
+        <li>
+          <b><div id="name" style="color: #26a69a;"></div></b>
+        </li>
       </ul>
-      <!--<ul id="nav-mobile" class="side-nav"><li><a href="#">Niveles</a></li></ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>-->
     </div>
-  </nav> <!-- Header -->
+  </nav>
+
+  <div class="row" style="margin-top: 40px;">
+    <div class="col s12 center">      
+      <p class="left-align light container">
+        1. ELige el audio dando clic en la flecha >.<br>
+        2. Luego reproduce ese audio.<br>
+        3. Empieza a escribir lo que entiendes.<br>
+      </p>
+    </div>
+  </div>
 
   <div class="container" style="margin-top: 5%;margin-left: 35%;">
     <h4 class="flow-text" id="h4title">Vamos, Comencemos!
-    <i class="material-icons" id="forward" style="cursor:pointer;color:#26a69a;">keyboard_arrow_right</i></h4>
+    <i class="material-icons animated infinite tada" id="forward"
+     style="cursor:pointer;font-size: 27px;color:#26a69a;">keyboard_arrow_right</i></h4>
     <audio controls><source type="audio/mpeg">Your browser does not support the audio element.</audio>
   </div>
   <br><br>
@@ -38,6 +86,7 @@
       <span class="flow-text ori1" id="originText" hidden></span>
     </div>
     <div class="col s12 m12 l12">
+    <br>
       <span id="send"><a class="waves-effect waves-light btn">solución</a></span>
       <span id="back" hidden><a class="waves-effect waves-light btn">atras</a></span>
     </div>            
