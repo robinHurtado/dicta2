@@ -50,6 +50,14 @@ div.row.animated{
  background-color: #69F0AE;
 }
 
+.how-use {
+  color: #07d4c1;
+}
+
+.how-use h2, .how-use h3 {
+  background-color: bisque;
+}
+
 h5.center {
   color: #4db6ac;
 }
