@@ -1,0 +1,8 @@
+TODOS:
+1) Mejorar estilo de la 2da pagina, hacerla ver más llamtiva.
+2)Eliminar footer
+
+login social. 
+https://github.com/firebase/FirebaseUI-Web   
+
+
