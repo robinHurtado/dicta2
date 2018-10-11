@@ -1,6 +1,7 @@
 TODOS:
-1) Mejorar estilo de la 2da pagina, hacerla ver más llamtiva.
+1) Mejorar estilo de la 2da pagina, hacerla ver mas llamtiva.
 2)Eliminar footer
+3) Averiguar como funciona el firebase para agregarlo de nuevo.
 
 login social. 
 https://github.com/firebase/FirebaseUI-Web   
