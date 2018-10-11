@@ -10,77 +10,12 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/animate.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <!-- FireBScript -->
-  <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-  <script src="js/config.js"></script>
-  <script type="text/javascript">
-    initApp = function() {
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          // User is signed in.
-          var displayName = user.displayName;
-          var email = user.email;
-          var photoURL = user.photoURL;
-          user.getIdToken().then(function(accessToken) {
-            document.getElementById('sign-out').hidden = false; // show sign out button
-            document.getElementById('signLi').hidden = true; // hide sign out button
-            document.getElementById('name').textContent = user.displayName;
-             if (user.photoURL){
-              document.getElementById('photo').src = user.photoURL;
-              document.getElementById('photo').style.display = 'block';
-            } else {
-              document.getElementById('photo').style.display = 'none';
-            }            
-          });
-        } else {
-          // User is signed out.
-          document.getElementById('sign-out').hidden = true; // hide sign out button
-          document.getElementById('signLi').hidden = false; // show sign in button
-          document.getElementById('name').textContent = '';
-          document.getElementById('photo').style.display = 'none';
-        }
-      }, function(error) {console.log(error);});
-      // fires when click on sign out button  
-      document.getElementById('sign-out').onclick = function () {
-        firebase.auth().signOut().then(function() {
-          // Sign-out successful.
-        }, function(error) {
-          alert(error);
-        });
-      } // end onclick event function
-
-    } // end initApp function
-
-    window.addEventListener('load', function() {
-      initApp();
-    });
-  </script>
-  <!-- firebase that handle the UI -->
-  <script src="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.3.0/firebaseui.css"/>
-  <script type="text/javascript" src="js/firescript.js"></script>
 </head>
 <body>
   <!-- NavBar -->
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo"><img src="imgs/logo.png"></a>
-      <ul class="right hide-on-med-and-down">
-        <li>
-          <div id="photo-container" style="width: 60px;height: 60px;">
-            <img id="photo" style="width: 60px;height: 60px;border-radius: 60px;">
-          </div>
-        </li>
-        <li>
-          <span id="sign-out" hidden><a class="waves-effect waves-light btn">sign out</a></span>
-        </li>
-        <li id="signLi"><!-- Signup -->        
-          <a class='dropdown-button btn' id="sign-in" data-constrainWidth="false" data-activates='dropdown1'>Sign in</a>
-          <ul id='dropdown1' class='dropdown-content' style="width: 261px;">
-            <li><div id="firebaseui-auth-container"></div></li>
-          </ul>
-        </li>
-      </ul>
   </nav>
   <!-- Content -->   
   <div class="parallax-container valign-wrapper" id="index-banner">
@@ -138,23 +73,9 @@
     </div>
     <!-- footer -->
     <footer class="page-footer teal">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">&copy;Dictame.com</h5>
-          </div>
-          <div class="col l3 s12">
-            <h5 class="white-text">Contactanos</h5>
-            <ul>
-              <li><a class="white-text" href="#!">Escribir Email</a></li>
-              <!--<li><a class="white-text" href="#!">Link 2</a></li>-->
-            </ul>
-          </div>        
-        </div>
-      </div>
       <div class="footer-copyright">
         <div class="container">
-        Hecho Por <a class="brown-text text-lighten-3" href="#">D. Robin</a>
+          Hecho Por <a class="brown-text text-lighten-3" href="#">D. Robin</a>
         </div>
       </div>
     </footer>
